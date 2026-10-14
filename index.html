@@ -111,7 +111,7 @@ function triggerAdminLogin(){
   
   emailjs.send(EMAILJS_SERVICE_ID,EMAILJS_TEMPLATE_ID,{code:code,to_email:ADMIN_EMAIL})
     .then(()=>{
-      const entered=prompt("Enter the 6-digit code sent to your email:");
+      const entered=prompt("Email sent! Check your inbox. Enter the 6-digit code:");
       if(entered===code){
         openAdminPanel();
       }else{
